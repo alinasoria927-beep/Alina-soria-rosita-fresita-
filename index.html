@@ -1,18 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosita fresita</title>
-<link rel="stylesheet" href="style.css">
+    <title>Proyecto Alina - Mini-Atlas Multimedia de Signos Vitales</title>
+    <style>
+        :root {
+            --primary-color: #0a4d68;
+            --secondary-color: #088395;
+            --accent-color: #05bfdb;
+            --bg-color: #f0f4f8;
+            --card-bg: #ffffff;
+            --text-color: #2b2d42;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin-bottom: 25px;
+        }
+        header h1 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+        header p {
+            color: #e0fbfc;
+            margin: 5px 0;
+        }
+        section {
+            background: var(--card-bg);
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--secondary-color);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        h3 {
+            color: var(--secondary-color);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .gallery figure {
+            margin: 0;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            border-radius: 8px;
+            width: 240px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery figure:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(8, 131, 149, 0.2);
+        }
+        .gallery img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .gallery figcaption {
+            font-size: 0.9rem;
+            margin-top: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        .video-container {
+            text-align: center; 
+            margin: 25px 0;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed var(--secondary-color);
+        }
+        .audio-section {
+            background: #e6fffa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #b2f5ea;
+        }
+        .audio-box {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .audio-box p {
+            margin: 0 0 8px 0;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #234e52;
+        }
+        audio {
+            width: 100%;
+            height: 36px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
 <body>
-<video controls>
-    <source src="rosita fresita video 2.mp4">
-</video>
-<body>
-    <h1>Proyecto informatica </h1>
-    <h2>informatica aplicada a la medicina</h2>
-     <p Fresita (Strawberry Shortcake) es un tierno y emblemático personaje que ha conquistado el corazón de varias generaciones con su dulzura, optimismo y característico aroma a fresas. Ambientado en el mágico y colorido mundo de Berry Bitty City (o Fresilandia), este icónico universo celebra el valor de la amistad, el trabajo en equipo y la amabilidad a través de las divertidas aventuras de Rosita y sus inseparables amigas. Con su clásico sombrero, su energía positiva y su pasión por la repostería, Rosita Fresita sigue siendo un símbolo de nostalgia y alegría que inspira tanto a niños como a adultos a ver siempre el lado dulce de la vida.></p>
-     <img src="Rosita fresita.jpg" width="55%">
-     <audio controls>
-        <source src="audio rosita fresita.mpeg"> 
+
+    <header>
+        <h1>Proyecto Académico: Mini-Atlas Multimedia de Signos Vitales</h1>
+        <p><strong>Asignatura:</strong> Informática Aplicada a la Medicina (3° Semestre)</p>
+        <p><strong>Alumno:</strong> Alina Yamileth Soria Flores</p>
+    </header>
+
+    <section>
+        <h2>1. Descripción General del Proyecto</h2>
+        <p>Este proyecto consiste en el desarrollo de una interfaz web interactiva diseñada con Visual Studio Code y estructurada mediante un archivo principal index.html. Su propósito central es servir como una herramienta de apoyo didáctico y de consulta rápida para estudiantes de ciencias de la salud, enfocándose en la correcta toma e interpretación de los signos vitales básicos, tales como la presión arterial, la frecuencia cardíaca y la temperatura corporal.</p>
+    </section>
+
+    <section>
+        <h2>2. Justificación y Utilidad Clínica</h2>
+        <p>En las etapas formativas del tercer semestre de la carrera de medicina, la adquisición de habilidades prácticas en semiología y exploración física es fundamental. Este sitio web recopila material visual y audiovisual generado para estandarizar los pasos metodológicos de la exploración clínica, evitando errores comunes durante la medición de parámetros hemodinámicos y mejorando el aprendizaje práctico.</p>
+    </section>
+
+    <section>
+        <h2>3. Implementación Multimedia (Imágenes, Vídeo y Audios)</h2>
+        <p>Para enriquecer la experiencia educativa, el sitio web integra de forma directa elementos multimedia esenciales:</p>
+        
+        <ul>
+            <li><strong>Soporte Visual (Imágenes):</strong> Se incorporaron fotografías clínicas detalladas que muestran la colocación anatómica correcta y los instrumentos de medición clínica.</li>
+            <li><strong>Soporte Audiovisual y Sonoro:</strong> Se adjuntó la presentación en vídeo y los audios de referencia clínica (latidos cardíacos, frecuencia respiratoria y ambiente clínico).</li>
+        </ul>
+
+        <!-- Vídeo de presentación del proyecto -->
+        <div class="video-container">
+            <h3>Vídeo de Presentación del Proyecto</h3>
+            <video controls width="80%" style="max-width: 700px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+                <source src="ALINA VIDEO.mp4" type="video/mp4">
+                Tu navegador no soporta el reproductor de vídeo.
+            </video>
+        </div>
+
+        <!-- 5 Imágenes relacionadas con el proyecto médico (Temperatura corregida) -->
+        <h3>Galería Clínica (5 Imágenes)</h3>
+        <div class="gallery">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=400&q=80" alt="Medición de Presión Arterial">
+                <figcaption>1. Medición de Presión</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=400&q=80" alt="Técnica de Auscultación">
+                <figcaption>2. Auscultación</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=400&q=80" alt="Pulso y Frecuencia Cardíaca">
+                <figcaption>3. Pulso y Frecuencia</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=400&q=80" alt="Medición de Temperatura Corporal">
+                <figcaption>4. Temperatura Corporal</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80" alt="Instrumental Clínico">
+                <figcaption>5. Instrumental Clínico</figcaption>
+            </figure>
+        </div>
+
+        <!-- 3 Audios clínicos específicos -->
+        <div class="audio-section">
+            <h3>Pistas de Audio Clínico y Referencia</h3>
+            
+            <div class="audio-box">
+                <p>Audio 1: Ritmo normal de los latidos del corazón (Frecuencia cardíaca)</p>
+                <audio controls preload="none">
+                    <source src="https://actions.google.com/sounds/v1/ambiences/heartbeat_1.ogg" type="audio/ogg">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+
+            <div class="audio-box">
+                <p>Audio 2: Frecuencia respiratoria normal (Patrón respiratorio)</p>
+                <audio controls preload="none">
+                    <source src="https://actions.google.com/sounds/v1/weather/wind_gust.ogg" type="audio/ogg">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+
+            <div class="audio-box">
+                <p>Audio 3: Ambiente clínico y de concentración académica</p>
+                <audio controls preload="none">
+                    <source src="https://actions.google.com/sounds/v1/ambiences/hospital_ward.ogg" type="audio/ogg">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Conclusión</h2>
+        <p>El desarrollo de este proyecto no solo fortalece las competencias técnicas en el uso de editores de código como Visual Studio Code y lenguajes de marcado web, sino que también vincula la informática con la práctica médica cotidiana, facilitando la difusión moderna, accesible y visual de los conocimientos clínicos adquiridos durante el semestre.</p>
+    </section>
+
+</body>
+</html>
